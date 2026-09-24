@@ -1,0 +1,8 @@
+decision: AUTO
+reasonable_alternatives: 1
+material_difference: false
+major_commitment: false
+technical: true
+rationale: Describe the evidence-determined choice
+evidence:
+- Existing rule or evidence pointer

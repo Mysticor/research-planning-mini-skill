@@ -1,0 +1,174 @@
+name: research-planning-mini
+version: 1.0.0
+entrypoint: SKILL.md
+always_load:
+- references/workflow.md
+axes:
+  study_type:
+    detection: Agent classifies evidence logic, records rationale and confidence;
+      no keyword-only final decision.
+    values:
+      ml-ai: references/study-types/ml-ai.md
+      experimental: references/study-types/experimental.md
+      simulation: references/study-types/simulation.md
+      observational: references/study-types/observational.md
+      engineering-method: references/study-types/engineering-method.md
+      review: references/study-types/review.md
+      mixed: references/study-types/mixed.md
+    multi: true
+phase_routes:
+  '0':
+  - references/user-decision-gates.md
+  - references/literature-strategy.md
+  '1':
+  - references/literature-strategy.md
+  - references/adapters.md
+  '2':
+  - references/deep-reading.md
+  - references/literature-visual-evidence.md
+  - references/adapters.md
+  '3':
+  - references/research-canon.md
+  - references/novelty-analysis.md
+  '4':
+  - references/journal-strategy.md
+  - references/user-decision-gates.md
+  '5':
+  - references/research-design.md
+  - references/statistics-design.md
+  - references/evidence-assets.md
+  - references/reproducibility.md
+  '6':
+  - references/readiness-gates.md
+  - references/user-decision-gates.md
+  '7':
+  - references/execution-tracking.md
+  - references/evidence-assets.md
+  '8':
+  - references/execution-tracking.md
+  - references/readiness-gates.md
+  '9':
+  - references/novelty-analysis.md
+  - references/journal-strategy.md
+  - references/adapters.md
+  '10':
+  - references/handoff-contract.md
+  - references/readiness-gates.md
+phases:
+- IDEA & INTAKE
+- LITERATURE DISCOVERY
+- SCREENING & DEEP READING
+- RESEARCH CANON / GAP / NOVELTY
+- CANDIDATE ROUTES & JOURNAL STRATEGY
+- DETAILED RESEARCH DESIGN
+- PRE-EXECUTION REVIEW
+- RESEARCH EXECUTION & EVIDENCE CAPTURE
+- RESULTS / CLAIM-EVIDENCE CLOSURE
+- NOVELTY & JOURNAL REFRESH
+- MANUSCRIPT HANDOFF
+templates:
+- templates/literature/visual_evidence_summary.md
+- templates/literature/literature_visual_inventory.csv
+- templates/literature/literature_table_inventory.csv
+- templates/literature/literature_formula_inventory.csv
+- templates/RESEARCH_BLUEPRINT_FINAL.md
+- templates/RESEARCH_DOSSIER_FINAL.md
+- templates/decision_log.md
+- templates/design/NOVELTY_THREAT_REGISTER.md
+- templates/design/argument_map.md
+- templates/design/candidate_routes.md
+- templates/design/data_blueprint.md
+- templates/design/evidence_asset_plan.md
+- templates/design/evidence_table.csv
+- templates/design/experiment_matrix.csv
+- templates/design/gap_and_novelty_map.md
+- templates/design/method_blueprint.md
+- templates/design/problem_definition.md
+- templates/design/reproducibility_plan.md
+- templates/design/research_canon.md
+- templates/design/research_questions_hypotheses.md
+- templates/design/risk_and_fallback.md
+- templates/design/statistics_plan.md
+- templates/design/target_journal_strategy.md
+- templates/deviation_log.md
+- templates/execution/asset_inventory.csv
+- templates/execution/claim_registry.yaml
+- templates/execution/failed_experiments.md
+- templates/execution/limitations_and_boundaries.md
+- templates/execution/results_facts.csv
+- templates/handoff/01_target_journal_profile.md
+- templates/handoff/02_research_story_facts.md
+- templates/handoff/05_methods_fact_sheet.yaml
+- templates/handoff/06_data_fact_sheet.yaml
+- templates/handoff/07_statistics_fact_sheet.yaml
+- templates/handoff/08_literature_canon.md
+- templates/handoff/09_claim_reference_map.csv
+- templates/handoff/10_key_paper_exemplars.md
+- templates/handoff/12_table_ready_data_inventory.md
+- templates/handoff/13_supplementary_evidence_candidates.md
+- templates/handoff/14_limitations_boundary_conditions.md
+- templates/handoff/15_terminology_ledger.yaml
+- templates/handoff/16_ethics_data_code_availability.md
+- templates/handoff/17_unresolved_items.md
+- templates/handoff/18_author_input_needed.md
+- templates/literature/MUST_DOWNLOAD_AND_READ.md
+- templates/literature/focused_corpus.csv
+- templates/literature/key_paper_portfolio.md
+- templates/literature/master_corpus.csv
+- templates/literature/reference_verification.csv
+- templates/literature/references.bib
+- templates/literature/search_protocol.md
+handoff_sources:
+  '01': handoff/01_target_journal_profile.md
+  '02': handoff/02_research_story_facts.md
+  '03': execution/claim_registry.yaml
+  '04': execution/results_facts.csv
+  '05': handoff/05_methods_fact_sheet.yaml
+  '06': handoff/06_data_fact_sheet.yaml
+  '07': handoff/07_statistics_fact_sheet.yaml
+  08: handoff/08_literature_canon.md
+  09: handoff/09_claim_reference_map.csv
+  '10': handoff/10_key_paper_exemplars.md
+  '11': execution/asset_inventory.csv
+  '12': handoff/12_table_ready_data_inventory.md
+  '13': handoff/13_supplementary_evidence_candidates.md
+  '14': handoff/14_limitations_boundary_conditions.md
+  '15': handoff/15_terminology_ledger.yaml
+  '16': handoff/16_ethics_data_code_availability.md
+  '17': handoff/17_unresolved_items.md
+  '18': handoff/18_author_input_needed.md
+scripts:
+- scripts/literature_evidence.py
+- scripts/researchctl.py
+- scripts/corpus.py
+- scripts/search_sources.py
+- scripts/specialists.py
+specialists:
+- nature-academic-search
+- nature-downloader
+- nature-reader
+- nature-paper-card
+- nature-proposal-writer
+- nature-statistics
+- nature-ref-verifier
+- nature-experiment-log
+- nature-citation
+handoff_consumer: manuscript-writing
+runtime:
+  python: Python 3.11+
+  required_modules:
+  - yaml
+  optional_modules:
+  - requests
+  - openpyxl
+  - xlrd
+  - pybliometrics
+vendor_root: ../../vendor/nature-skills/skills
+upstream_lock: ../../vendor/upstream-lock.json
+python_vendor: ../../vendor/python
+
+project_coordination:
+  contract_version: "1.1"
+  actor: research_planning
+  helper: scripts/projectctl.py
+  shared_contract: ../../../workflow-contract/README.md

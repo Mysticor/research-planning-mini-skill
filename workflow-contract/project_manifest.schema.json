@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Four-stage project manifest 1.1",
+  "type": "object",
+  "required": [
+    "workflow_version",
+    "project_id",
+    "project_title",
+    "study_type",
+    "current_stage",
+    "target_journal",
+    "created_at",
+    "updated_at",
+    "canonical_outputs",
+    "stage_status",
+    "completion",
+    "freshness",
+    "stage_revision",
+    "staleness",
+    "input_revision",
+    "output_revision",
+    "open_blockers",
+    "author_decisions",
+    "last_major_change",
+    "objects",
+    "changes",
+    "revalidation_requests",
+    "legacy_recovery"
+  ],
+  "properties": {
+    "workflow_version": {
+      "const": "1.1"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "project_title": {
+      "type": "string"
+    },
+    "study_type": {
+      "type": "string"
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "target_journal": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_outputs": {
+      "type": "object"
+    },
+    "stage_status": {
+      "type": "object",
+      "required": [
+        "research_planning",
+        "manuscript_writing",
+        "manuscript_review",
+        "publication_build"
+      ],
+      "properties": {
+        "research_planning": {
+          "enum": [
+            "BLOCKED",
+            "IN_PROGRESS",
+            "NOT_STARTED",
+            "READY",
+            "STALE"
+          ]
+        },
+        "manuscript_writing": {
+          "enum": [
+            "BLOCKED",
+            "IN_PROGRESS",
+            "NOT_STARTED",
+            "READY",
+            "STALE"
+          ]
+        },
+        "manuscript_review": {
+          "enum": [
+            "BLOCKED",
+            "IN_PROGRESS",
+            "NOT_STARTED",
+            "READY",
+            "STALE"
+          ]
+        },
+        "publication_build": {
+          "enum": [
+            "BLOCKED",
+            "IN_PROGRESS",
+            "NOT_STARTED",
+            "READY",
+            "STALE"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "completion": {
+      "type": "object"
+    },
+    "freshness": {
+      "type": "object"
+    },
+    "stage_revision": {
+      "type": "object",
+      "required": [
+        "research_planning",
+        "manuscript_writing",
+        "manuscript_review",
+        "publication_build"
+      ],
+      "properties": {
+        "research_planning": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manuscript_writing": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "manuscript_review": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "publication_build": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "staleness": {
+      "type": "object"
+    },
+    "input_revision": {
+      "type": "object"
+    },
+    "output_revision": {
+      "type": "object"
+    },
+    "open_blockers": {
+      "type": "array"
+    },
+    "author_decisions": {
+      "type": "array"
+    },
+    "last_major_change": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objects": {
+      "type": "object"
+    },
+    "changes": {
+      "type": "array"
+    },
+    "revalidation_requests": {
+      "type": "array"
+    },
+    "legacy_recovery": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

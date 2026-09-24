@@ -1,0 +1,3 @@
+outputs:
+  manuscript_draft: manuscript/manuscript.md
+evidence: manuscript/checks/readiness.json

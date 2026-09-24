@@ -1,0 +1,13 @@
+FIG_003:
+  kind: FIGURE
+  brief: figures/FIG_003/brief.md
+  sources:
+  - figures/FIG_003/source_data/data.csv
+  reproduction:
+  - figures/FIG_003/code/plot.py
+  - figures/FIG_003/editable/figure03.svg
+  final: figures/FIG_003/final/figure03.pdf
+  depends_on:
+  - RESULT_001
+  source_type: OWNED
+  publication_use: true

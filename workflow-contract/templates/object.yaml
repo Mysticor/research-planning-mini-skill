@@ -1,0 +1,5 @@
+oid: RESULT_001
+path: research_blueprint/results_facts.csv
+kind: RESULT
+depends_on: []
+locator: result_id=RESULT_001

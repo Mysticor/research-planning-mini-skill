@@ -1,0 +1,8 @@
+interface:
+  display_name: "Research Planning Mini"
+  short_description: "精简科研规划、按需精读与分批接续，保留真实证据和写作交接校验"
+  icon_small: "./assets/blueprint-mini.svg"
+  icon_large: "./assets/blueprint-mini.svg"
+  default_prompt: "用 $research-planning-mini 从当前研究目录继续，按需调查并分批保存证据和接续记录。"
+policy:
+  allow_implicit_invocation: true

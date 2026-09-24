@@ -1,0 +1,1 @@
+experiment_id,result_id,kind,metric,value,unit,sample_size,uncertainty,ci,p_value,repeats,seed,source_file,source_sha256,analysis_script,analysis_sha256,analysis_type,status,notes

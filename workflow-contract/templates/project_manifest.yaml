@@ -1,0 +1,53 @@
+workflow_version: '1.1'
+project_id: ASSIGNED_ON_INIT
+project_title: Research project
+study_type: UNKNOWN
+current_stage: research_planning
+target_journal: null
+created_at: null
+updated_at: null
+canonical_outputs:
+  research_blueprint: null
+  research_dossier: null
+  manuscript_handoff: null
+  manuscript_draft: null
+  reviewed_manuscript: null
+  publication_package: null
+stage_status:
+  research_planning: NOT_STARTED
+  manuscript_writing: NOT_STARTED
+  manuscript_review: NOT_STARTED
+  publication_build: NOT_STARTED
+completion:
+  research_planning: NOT_STARTED
+  manuscript_writing: NOT_STARTED
+  manuscript_review: NOT_STARTED
+  publication_build: NOT_STARTED
+freshness:
+  research_planning: NEEDS_CHECK
+  manuscript_writing: NEEDS_CHECK
+  manuscript_review: NEEDS_CHECK
+  publication_build: NEEDS_CHECK
+stage_revision:
+  research_planning: 0
+  manuscript_writing: 0
+  manuscript_review: 0
+  publication_build: 0
+staleness:
+  research_planning: []
+  manuscript_writing: []
+  manuscript_review: []
+  publication_build: []
+input_revision:
+  research_planning: {}
+  manuscript_writing: {}
+  manuscript_review: {}
+  publication_build: {}
+output_revision: {}
+open_blockers: []
+author_decisions: []
+last_major_change: null
+objects: {}
+changes: []
+revalidation_requests: []
+legacy_recovery: []
