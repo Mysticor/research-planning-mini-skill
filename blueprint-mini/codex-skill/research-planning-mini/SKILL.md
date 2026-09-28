@@ -6,6 +6,8 @@ description: >
 ---
 # Research Planning Mini
 
+Research Workflow Skills · 01 · Planning. See the repository README for the four-stage series and installation.
+
 从研究问题推进到真实证据的写作交接。先完成用户当前需要的研究工作，不因模板存在就展开全部流程。
 
 ## 开始与恢复
@@ -18,13 +20,13 @@ description: >
 先做足以判断方向的少量探索，不先完成全面检索或批量精读再交代选题。早期给出简短选题说明：研究对象与核心问题、论文类型与暂定题目、已有依据和拟验证的价值、范围边界，以及下一步所需数据或文献。拟议贡献是待验证假设，不是预定结论。
 若用户尚未明确选择方向与范围，展示推荐方案并取得实际确认后，再扩大检索、批量下载和精读；只有存在重大不同选择时才列备选。不用 AUTO 替用户选题，也不为定题强行凑方案数量。
 已有明确选题或授权时沿用并简短复述，不重复确认。将说明及实际决定记入现有 decision_log/state/resume，供恢复读取，不新增一套状态文件。A 记录早期范围，B 在核心阅读后核验方向；发现研究问题、范围或论文类型需实质变化时，解释证据与影响，确认转向后继续。细化措辞、补证据不必再问。
-暂定标题可随证据调整；论文正文仍由 manuscript-writing 完成。定方向不等于提前决定研究结果。
+暂定标题可随证据调整；论文正文交给 manuscript-writing-mini（也兼容 manuscript-writing）完成。定方向不等于提前决定研究结果。
 
 ## 按需推进
 - 选题与检索：先明确问题，读[检索规则](references/literature-strategy.md)，按领域和覆盖缺口选择来源并保存查询，不为凑数据库数量重复检索。
 - 获取与阅读：读[精读规则](references/deep-reading.md)。普通文献保存简短证据笔记，核心文献按需要展开。下载按[工具适配](references/adapters.md)，网页访问或题录成功不等于 PDF 已取得。
 - 设计与实施：读[设计规则](references/research-design.md)及适用研究类型。高成本执行前冻结计划；实际结果、失败、偏离和主张记入原有账本。综述记录筛选与综合，不编造实验。
-- 写作交接：需要交接时读[交接契约](references/handoff-contract.md)和[就绪校验](references/readiness-gates.md)，运行 check/package 后交给 `manuscript-writing`。不在这里写论文正文。
+- 写作交接：需要交接时读[交接契约](references/handoff-contract.md)和[就绪校验](references/readiness-gates.md)，运行 check/package 后交给 `manuscript-writing-mini`（或兼容的 `manuscript-writing`）。不在这里写论文正文。
 
 ## 分批与接续
 - 精读通常每批 1–3 篇，按篇幅和问题调整；这是保存粒度，不是科研覆盖上限。保存后可继续下一批，不因分批反复要求确认。

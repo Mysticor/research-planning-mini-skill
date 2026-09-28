@@ -1,7 +1,22 @@
 # Research Planning Mini
 
+**Research Workflow Skills · 01 · Planning**
+
 轻量、可恢复的科研规划 Codex Skill：从选题、文献证据与研究设计，推进到研究实施和写作交接。
 先做少量探索，尽早确认研究方向，再按需精读、分批保存。保留来源定位、计划冻结、真实证据和交接校验；不代写论文正文。
+
+## Research Workflow Skills 系列
+
+四个独立安装、按证据交接衔接的科研工作流 Skill。可按需使用单个阶段；按阶段接续时，输入必须满足对应交接契约。
+
+| 阶段 | Skill | 职责 |
+|---|---|---|
+| 01 · Planning | [Research Planning Mini](https://github.com/Mysticor/research-planning-mini-skill) | 选题、研究设计与证据交接 |
+| 02 · Writing | [Manuscript Writing Mini](https://github.com/Mysticor/manuscript-writing-mini-skill) | 证据驱动的正文、图表与初稿 |
+| 03 · Review | [Manuscript Review Mini](https://github.com/Mysticor/manuscript-review-mini-skill) | 独立审查、修订与审后交接 |
+| 04 · Publication | [Publication Build](https://github.com/Mysticor/publication-build-skill) | 模板适配、LaTeX/PDF 与投稿源码包 |
+
+研究规划 → 论文写作 → 审稿修订 → 出版排版。研究事实、引用与数值追溯贯穿全流程；通用版不预设个人领域、期刊、模型、账号或固定页数。排版也支持独立的普通文档转换。
 
 ## 安装
 
