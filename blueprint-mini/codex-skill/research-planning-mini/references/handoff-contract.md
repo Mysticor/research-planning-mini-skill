@@ -14,6 +14,14 @@ actual claims/numbers/methods/data/statistics; literature canon and verified cla
 references; legal exemplar patterns; asset and table-ready inventories; potential
 SI evidence; limitations; terminology; ethics/data/code availability; unresolved
 items and truly author-only questions. Templates are prompts, not completed facts.
+Carry the relevant library beyond the core shortlist. In the existing literature
+canon and source records, distinguish candidate, read and verified status, source
+locations, likely evidentiary roles and remaining coverage gaps. Keep screened-only
+candidates in library notes/cards, not the verified claim-reference map or required
+reference-verification rows; retain the existing checker requirements. Preserve any
+user-supplied citation baseline/target in the handoff notes without recalculating it.
+Library size is not a promise of final cited count; Stage 2 selects actual uses and
+verifies sources at use. Do not present screened-only candidates as verified support.
 
 manuscript-writing should start by reading README → readiness → claims/results → actual
 fact sheets → canon/references → assets/limits, then verify paths and build its own
