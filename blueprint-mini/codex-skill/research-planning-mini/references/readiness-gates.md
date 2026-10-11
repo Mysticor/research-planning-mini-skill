@@ -1,6 +1,13 @@
 > Coordination update 1.1: [project contract](project-coordination.md) takes precedence for routine AUTO decisions, freshness and optional specialist routing. Gate labels remain checkpoints.
 
 # Readiness gate
+For full research preparation, inspect the [core-literature](core-literature.md)
+record: at least 100 eligible unique candidates actually screened, 20 selected
+papers obtained and deeply read with source-grounded notes, and a cross-paper content
+synthesis. Report each actual count and any explicit user-adjusted target. Missing
+screening/reading remains unfinished even if scripts pass; do not label the preparation
+complete or mark its scientific review passed with unmet active requirements. A local
+query/pilot is not a claim of full preparation; reuse existing valid work on resume.
 READY: complete actual evidence, central claims supported, all key numbers traced,
 statistics complete or justified N/A, limitations, chosen route, selected or explicit
 target-agnostic journal, canon, verified important references, current novelty and

@@ -23,7 +23,7 @@ Research Workflow Skills · 01 · Planning. See the repository README for the fo
 暂定标题可随证据调整；论文正文交给 manuscript-writing-mini（也兼容 manuscript-writing）完成。定方向不等于提前决定研究结果。
 
 ## 按需推进
-- 选题与检索：先明确问题，读[检索规则](references/literature-strategy.md)，按领域和覆盖缺口选择来源并保存查询，不为凑数据库数量重复检索。
+- 选题与检索：先明确问题，读[检索规则](references/literature-strategy.md)。方向确定后的完整研究准备按[核心文献遴选](references/core-literature.md)筛查至少100篇相关候选，选20篇取得全文并完成科学精读，再形成内容方案；恢复复用已有工作。
 - 获取与阅读：读[精读规则](references/deep-reading.md)。普通文献保存简短证据笔记，核心文献按需要展开。下载按[工具适配](references/adapters.md)，网页访问或题录成功不等于 PDF 已取得。
 - 期刊与范例：目标期刊确定后按[期刊策略](references/journal-strategy.md)准备目标刊约10篇及同领域同文类、水平相近期刊合计约10篇全文对照，供写作校准体量、图表与引用；复用现有库，分批核对。
 - 设计与实施：读[设计规则](references/research-design.md)及适用研究类型。高成本执行前冻结计划；实际结果、失败、偏离和主张记入原有账本。综述记录筛选与综合，不编造实验。

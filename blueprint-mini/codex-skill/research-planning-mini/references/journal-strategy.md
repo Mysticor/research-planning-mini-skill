@@ -1,4 +1,8 @@
 # Journal as a design constraint
+For scientific content selection, use [core literature](core-literature.md): screen
+at least 100 candidates and deeply read 20 selected papers without a target-journal
+tier ceiling. The two comparator groups below calibrate manuscript scale. Reuse
+suitable core papers for both purposes; neither group substitutes for the other.
 Compare STRETCH, PRIMARY and BACKUP using current official scope/article types,
 audience, recent relevant exemplars, novelty and method expectations, real-world
 validation, data/code rules, length/display/SI limits and submission requirements.
@@ -33,8 +37,9 @@ section/figure locators. Treat a composite figure as one figure. Separate SI fro
 main content and leave unavailable SI unknown; distinguish estimates, languages,
 article types and incompatible counting scopes. Page count/layout is supplementary
 context and depends on version, not a substitute for text length. This is scoped
-full-text comparison, not mandatory full translation or deep scientific review of
-all 20 papers; verify any subsequently cited scientific claim separately.
+full-text comparison for the comparator role. Papers also selected for the core
+research set must meet the full scientific deep-reading rules, not only measurement
+checks. Full translation is not required; verify subsequently cited claims at use.
 
 Keep per-paper records in 10_key_paper_exemplars and source/acquisition records;
 summarize in 01_target_journal_profile. For each group and metric separately, report

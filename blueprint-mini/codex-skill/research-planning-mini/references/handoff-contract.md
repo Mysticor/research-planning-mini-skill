@@ -23,6 +23,14 @@ user-supplied citation baseline/target in the handoff notes without recalculatin
 Library size is not a promise of final cited count; Stage 2 selects actual uses and
 verifies sources at use. Do not present screened-only candidates as verified support.
 
+For the core literature set, 08_literature_canon links the search/screening criteria,
+actual unique candidate/screened/selected/downloaded/deeply-read counts, selected and
+near-selected paper IDs with reasons, full-text originals and reading notes, and
+the resulting cross-paper evidence/gap/content synthesis. Preserve exclusions,
+contradictions, replacements and outstanding manual-download items. Keep the
+scientific core distinct from journal-format comparators and mark shared paper IDs;
+mere citation counts or 20 abstract summaries do not satisfy the deep-reading target.
+
 For journal comparators, carry the two groups from [journal strategy](journal-strategy.md)
 in the existing 01 target profile and 10 exemplar records: selection rationale,
 paper IDs/groups, full-text paths/hashes, per-paper measures and source locators,

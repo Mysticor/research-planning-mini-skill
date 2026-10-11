@@ -14,6 +14,8 @@ Status: UNFILLED
 
 [TO_COMPLETE]
 
+<!-- 核心精读组需完整正文、全部主要图表/图注及影响判断的关键SI；关联原件路径/哈希、实际阅读范围、证据定位、方法/结果/局限/比较笔记与未闭合项。下载、自动抽取及摘要阅读不能记为精读完成。其他来源按证据用途记录范围；适合作期刊对照的论文可标记双重用途。填写后替换本提示。 -->
+
 ## Method/experiment/statistical/story patterns
 
 [TO_COMPLETE]
