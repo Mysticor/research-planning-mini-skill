@@ -25,6 +25,7 @@ Research Workflow Skills · 01 · Planning. See the repository README for the fo
 ## 按需推进
 - 选题与检索：先明确问题，读[检索规则](references/literature-strategy.md)，按领域和覆盖缺口选择来源并保存查询，不为凑数据库数量重复检索。
 - 获取与阅读：读[精读规则](references/deep-reading.md)。普通文献保存简短证据笔记，核心文献按需要展开。下载按[工具适配](references/adapters.md)，网页访问或题录成功不等于 PDF 已取得。
+- 期刊与范例：目标期刊确定后按[期刊策略](references/journal-strategy.md)准备目标刊约10篇及同领域同文类、水平相近期刊合计约10篇全文对照，供写作校准体量、图表与引用；复用现有库，分批核对。
 - 设计与实施：读[设计规则](references/research-design.md)及适用研究类型。高成本执行前冻结计划；实际结果、失败、偏离和主张记入原有账本。综述记录筛选与综合，不编造实验。
 - 写作交接：需要交接时读[交接契约](references/handoff-contract.md)和[就绪校验](references/readiness-gates.md)，运行 check/package 后交给 `manuscript-writing-mini`（或兼容的 `manuscript-writing`）。不在这里写论文正文。
 

@@ -23,6 +23,16 @@ user-supplied citation baseline/target in the handoff notes without recalculatin
 Library size is not a promise of final cited count; Stage 2 selects actual uses and
 verifies sources at use. Do not present screened-only candidates as verified support.
 
+For journal comparators, carry the two groups from [journal strategy](journal-strategy.md)
+in the existing 01 target profile and 10 exemplar records: selection rationale,
+paper IDs/groups, full-text paths/hashes, per-paper measures and source locators,
+group statistics, actual downloaded/measured counts and remaining gaps. Include
+the referenced originals in the self-contained snapshot so Stage 2 can reuse and
+complete this work without downloading the same papers again. A provisional sample
+remains visibly unfinished even if package checks pass. Comparator status alone
+does not establish scientific support or require citation; retain the distinction
+between candidates, read sources and verified claim uses.
+
 manuscript-writing should start by reading README → readiness → claims/results → actual
 fact sheets → canon/references → assets/limits, then verify paths and build its own
 Manuscript Blueprint. It owns paragraph/Results order, figure/table numbers, main

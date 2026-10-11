@@ -11,3 +11,41 @@ Refresh primary guidance at handoff, including scope, type, latest limits, data/
 and submission requirements; document changes since design. Target-agnostic needs
 an explicit dated record of that choice and general obligations; do not invent a
 journal just to pass the check. Archived local profiles are starting points only.
+
+Once a target and article type are chosen, assemble two disjoint, deduplicated
+full-text comparator groups: about 10 papers from the target journal and about 10
+in total from other comparable journals, preferably spanning multiple venues.
+Aim for 10 per group; justify modest variation or shortages. Do not repeat this
+collection for every candidate journal. Define selection criteria before sampling:
+similar field, question/method, article type, study scale and evidence requirements,
+primarily recent papers. Explain comparable standing using audience, contribution
+and validation expectations; rankings or metrics, if used, need dated sources and
+cannot be the sole basis. Avoid selecting only unusually rich displays or easy OA.
+
+Reuse available originals and follow the downloader adapter for missing ones.
+Save a real, readable PDF or a complete HTML archive including body, displays and
+references; verify title/DOI/journal/version, retrieval source/date, project-relative
+path and SHA256. Abstracts, landing/login pages and failed downloads do not count.
+Inspect every full text for main-text length and counting scope, main figure and
+table counts separately, unique main-manuscript cited works including captions
+(or explicitly labelled bibliography-entry counts), structure and evidence/display roles, with page or
+section/figure locators. Treat a composite figure as one figure. Separate SI from
+main content and leave unavailable SI unknown; distinguish estimates, languages,
+article types and incompatible counting scopes. Page count/layout is supplementary
+context and depends on version, not a substitute for text length. This is scoped
+full-text comparison, not mandatory full translation or deep scientific review of
+all 20 papers; verify any subsequently cited scientific claim separately.
+
+Keep per-paper records in 10_key_paper_exemplars and source/acquisition records;
+summarize in 01_target_journal_profile. For each group and metric separately, report
+valid n, median, interquartile range and material outliers. Target-journal patterns
+primarily guide manuscript scale; peer patterns provide context, not a pooled quota.
+Current official rules take precedence. These counts inform writing choices, not
+required output counts or 20 automatic citations. Work in resumable batches. If
+access or comparable supply is insufficient, record actual downloaded/measured
+counts, missing items, selection bias and a provisional recommendation; retain the
+unfinished task for handoff. Do not fill the target group with peer papers, call
+2–3 examples a completed sample, or infer completeness from a readiness-script PASS.
+Target-agnostic work records the limitation; changing target/type refreshes only
+the affected sample. Fine visual analysis may use a few selected examples after
+the broader comparison, without replacing it.
