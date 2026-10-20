@@ -1,6 +1,6 @@
 # Journal as a design constraint
 For scientific content selection, use [core literature](core-literature.md): screen
-at least 100 candidates and deeply read 20 selected papers without a target-journal
+the default 100-paper shortlist and 30-paper deep-reading targets, or the explicit user-adjusted targets recorded under core-literature, without a target-journal
 tier ceiling. The two comparator groups below calibrate manuscript scale. Reuse
 suitable core papers for both purposes; neither group substitutes for the other.
 Compare STRETCH, PRIMARY and BACKUP using current official scope/article types,

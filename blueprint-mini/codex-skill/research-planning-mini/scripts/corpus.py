@@ -17,7 +17,7 @@ def read(path):
         return [{**r,'title':r.get('title') or r.get('primary_title',''),'authors':'; '.join(r.get('authors',[])),
                  'year':str(r.get('year') or r.get('publication_year',''))[:4],'doi':r.get('doi','')} for r in entries]
     if p.suffix.lower()=='.json':
-        d=json.loads(p.read_text());return d if isinstance(d,list) else [{**r,'source':r.get('source',d.get('source',''))} for r in d['results']]
+        d=json.loads(p.read_text());return d if isinstance(d,list) else [{**r,'source':r.get('source',d.get('source',''))} for r in d.get('results',d.get('records',[]))]
     if p.suffix.lower() in {'.csv','.tsv'}:
         with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f,delimiter='\t' if p.suffix.lower()=='.tsv' else ','))
     if p.suffix.lower() in {'.xls','.xlsx'}:
@@ -28,7 +28,7 @@ def read(path):
     raise ValueError('Normalize RIS/BibTeX/other formats using specialist converter or mature parser first')
 def normalize_record(record):
     r=dict(record);aliases={'title':['Article Title','Document Title','TI','Title'],
-      'doi':['DOI','DI'],'year':['Publication Year','PY','Year'],
+      'abstract':['Abstract','AB','abstract_note'],'doi':['DOI','DI'],'year':['Publication Year','PY','Year'],
       'authors':['Authors','AU','Author full names','author'],
       'source_record_ids':['UT','EID','Accession Number','ID']}
     for key,names in aliases.items():
@@ -45,12 +45,20 @@ def merge(records):
     for i,r in enumerate(records):
         r=normalize_record(r);r['doi']=doi(r.get('doi'));r.setdefault('paper_id','P'+hashlib.sha256((r['doi'] or json.dumps(r,sort_keys=True,ensure_ascii=False)).encode()).hexdigest()[:12])
         key=('doi',r['doi']) if r['doi'] else ('meta',norm(r.get('title')),str(r.get('year')),norm(r.get('authors')))
+        if not r['doi'] and r.get('source')=='google_scholar' and r.get('url') and r.get('title'):
+            key=('scholar',norm(r['title']),r['url'])
         usable=bool(r['doi']) or all(key[1:])
         if usable and key in keys:
             existing=output[keys[key]]
             for k in ['title','year','authors']:
                 if existing.get(k) and r.get(k) and norm(existing[k])!=norm(r[k]):conflicts.append({'paper_id':existing['paper_id'],'field':k,'kept':existing[k],'incoming':r[k]})
                 elif not existing.get(k):existing[k]=r.get(k,'')
+            if not str(existing.get('abstract') or '').strip() and str(r.get('abstract') or '').strip():
+                existing['abstract']=r['abstract']
+                existing['abstract_status']='PRESENT'
+                existing['abstract_source']=r.get('abstract_source') or r.get('source')
+            if r.get('abstract_recovery_policy')=='scholar_description_only':
+                existing['abstract_recovery_policy']='scholar_description_only'
             existing['provenance_records'].append(r)
         else:
             if usable:keys[key]=len(output)

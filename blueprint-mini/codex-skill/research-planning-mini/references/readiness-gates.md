@@ -2,7 +2,7 @@
 
 # Readiness gate
 For full research preparation, inspect the [core-literature](core-literature.md)
-record: at least 100 eligible unique candidates actually screened, 20 selected
+record: by default at least 100 evidence-based unique shortlisted papers (or an explicitly user-approved adjusted target with dated rationale and coverage limits under core-literature), each with an obtained original abstract, its source, actual abstract-reading record and inclusion rationale; missing abstracts cannot enter the shortlist. Then 30 selected
 papers obtained and deeply read with source-grounded notes, and a cross-paper content
 synthesis. Report each actual count and any explicit user-adjusted target. Missing
 screening/reading remains unfinished even if scripts pass; do not label the preparation

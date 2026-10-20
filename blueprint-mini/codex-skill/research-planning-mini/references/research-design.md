@@ -1,6 +1,7 @@
 # Executable research protocol
 Each RQ: question, significance, hypothesis, expected observation (PLANNED),
 alternative explanation, falsification condition, required evidence and test.
+Reuse the early topic assessment of assumptions, alternative explanations and minimum feasible checks; update it with literature evidence and expand it into the protocol rather than restarting ideation.
 Compare routes only when meaningful alternatives exist; otherwise record the justified route. Gate C follows the shared AUTO rule before detailed commitment.
 
 Every method module: purpose, input/output, selected and alternative methods,

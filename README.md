@@ -37,6 +37,14 @@ ln -s "$PWD/blueprint-mini/codex-skill/research-planning-mini" "${CODEX_HOME:-$H
 
 例如：`用 $research-planning-mini 帮我研究一个选题，先确认问题、范围和可用数据，再深入检索。研究目录是 /path/to/research-project。`
 
+## 阶段运行与文献获取
+
+默认在阶段或精读批次结束后保存、汇报并停止，等待用户继续；研究目录中的状态和接续记录支持新对话恢复。摘要筛选默认以100篇有依据的入围文献为目标，客观不足时说明覆盖及缺口，经用户确认调整，不凑数。再选择30篇核心全文精读，数量调整同样保留依据。
+
+检索汇报按渠道列出实际取回、去重、摘要、已读和入围数，另报跨渠道去重与重合。支持公共索引分页、摘要补全、IEEE（用户自己的API Key）、PubMed，以及授权WoS完整记录导入。Google Scholar仅接收其自身可核实的Description，不把搜索片段当摘要。来源可用性取决于当前网络、授权和限流。
+
+公开全文获取可复用检索链接及OpenAlex、Europe PMC、Unpaywall等来源；Unpaywall联系邮箱、API Key和机构登录由使用者自行配置，不包含在仓库内。全文缺失保留清单交由用户补充，下载成功不等于精读完成。
+
 ## 目录与交接
 
 - `blueprint-mini/codex-skill/research-planning-mini/`：指令、脚本、模板、图标和 UI 元数据。
@@ -54,7 +62,7 @@ python -B -m unittest discover -s blueprint-mini/codex-skill/research-planning-m
 python -B -m unittest discover -s workflow-contract/tests -p 'test_*.py'
 ```
 
-包含20项规划测试和25项共享契约测试；合成测试数据标注为 MOCK/FIXTURE，不是真实研究成果。
+包含规划、检索、摘要补全、全文核验及共享契约测试；合成测试数据标注为 MOCK/FIXTURE，不是真实研究成果。
 文献下载取决于开放资源或有效授权；浏览器下载路线可能还需要 Node.js 和登录会话。测试不代表所有下载路线已完成端到端验证。分批保存支持恢复，但不能保证消除网络或上下文压缩错误。
 
 ## 许可证与来源
