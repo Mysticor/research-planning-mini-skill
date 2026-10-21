@@ -3,6 +3,8 @@ name: research-planning-mini
 description: >
   Research Planning Mini：轻量推进选题、文献证据、研究设计与实施，分批保存并接续，
   支持可恢复的研究状态与写作交接。用于选题调研、精简科研规划或低上下文研究流程。
+metadata:
+  version: "2"
 ---
 # Research Planning Mini
 

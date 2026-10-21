@@ -1,5 +1,7 @@
 # Research Planning Mini
 
+当前版本：**v2** · [更新记录与编号规则](CHANGELOG.md)
+
 **Research Workflow Skills · 01 · Planning**
 
 轻量、可恢复的科研规划 Codex Skill：从选题、文献证据与研究设计，推进到研究实施和写作交接。
