@@ -48,3 +48,6 @@ Description 有时是完整作者摘要，有时只是简述或截断内容。�
 参考实现思路：吸收 [scientific-brainstorming](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/scientific-brainstorming/references) 的研究维度拆解和 [systematic-literature-review](https://github.com/bytedance/deer-flow/tree/main/skills/public/systematic-literature-review) 的分批提取、跨文献综合；不照搬其检索条数限制、固定代理数或仅摘要流程。
 
 选定核心组后，将含检索来源链接及合并溯源记录的选中记录交给[全文获取与接续](fulltext-recovery.md)，不要仅导出DOI而丢弃已经找到的全文地址。
+
+## 知网：可选浏览器渠道
+按[知网执行与corpus交接](cnki-browser.md)操作。`--sources cnki`仅登记待浏览器执行任务；必须实际完成搜索/翻页/详情摘要提取后才能统计已取回。缺少本地浏览器时生成协作任务包；不默认每题启用。

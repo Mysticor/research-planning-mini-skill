@@ -6,7 +6,8 @@ from datetime import datetime,timezone
 from pathlib import Path
 from specialists import resolve
 from public_search import PUBLIC, search
-SOURCES=['wos','sciencedirect','scopus','crossref','openalex','semantic_scholar','arxiv','ieee','ei','pubmed','google_scholar']
+SOURCES=['wos','sciencedirect','scopus','crossref','openalex','semantic_scholar','arxiv','ieee','ei','pubmed','google_scholar','cnki']
+DEFAULT_SOURCES=[s for s in SOURCES if s!='cnki']
 def query_source(source,query,limit,**options):
     if source in PUBLIC:return search(source,query,limit,**options)
     if source in ('ieee','pubmed','google_scholar'):
@@ -14,6 +15,9 @@ def query_source(source,query,limit,**options):
         if source=='ieee' and not ieee_key():
             return {'status':'SOURCE_UNAVAILABLE','availability':'USER_ACTION_REQUIRED','attempted':False,'results':[], 'reason':'Configure local IEEE API key; never put it in project files.'}
         return search(source,query,limit,loader=page,**options)
+    if source=='cnki':
+        return {'status':'USER_ACTION_REQUIRED','availability':'USER_ACTION_REQUIRED','attempted':False,'results':[],
+                'reason':'Optional CNKI browser task; follow references/cnki-browser.md for search, pagination and expanded original abstracts, then corpus.py. No search executed by this CLI.'}
     if source=='wos':
         return {'status':'USER_ACTION_REQUIRED','availability':'USER_EXPORT_AVAILABLE','attempted':False,'results':[],
                 'reason':'Use authorized Chrome WoS search and range export with Abstract, then scripts/import_wos.py; browser login if needed. No API request attempted.'}
@@ -65,7 +69,7 @@ def run(source,query,out,limit=300,variant='broad-discovery',page_size=50,max_pa
     return record
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--query',required=True);p.add_argument('--output',required=True)
-    p.add_argument('--sources',nargs='+',default=SOURCES,choices=SOURCES);p.add_argument('--limit',type=int,default=300)
+    p.add_argument('--sources',nargs='+',default=DEFAULT_SOURCES,choices=SOURCES);p.add_argument('--limit',type=int,default=300)
     p.add_argument('--page-size',type=int,default=50);p.add_argument('--max-pages',type=int,default=10)
     p.add_argument('--start-cursor',help='Resume one source/query from the recorded next_cursor')
     p.add_argument('--variant',default='broad-discovery');a=p.parse_args()

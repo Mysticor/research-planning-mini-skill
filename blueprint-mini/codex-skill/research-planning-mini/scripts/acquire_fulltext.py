@@ -34,6 +34,22 @@ def candidates(record):
     visit(record)
     return out
 
+def cnki_record(record):
+    """CNKI provenance is a manual-download route, including merged records."""
+    sources = record.get('sources', [])
+    if isinstance(sources, str): sources = [sources]
+    if any(str(s).casefold() in ('cnki', '知网') for s in [record.get('source', ''), *sources]): return True
+    if any(str(k).casefold() == 'cnki' for k in (record.get('source_ids') or {})): return True
+    for item in candidates(record):
+        host = (urlparse(item['url']).hostname or '').lower()
+        if host == 'cnki.net' or host.endswith('.cnki.net') or host == 'cnki.com.cn' or host.endswith('.cnki.com.cn'): return True
+    return any(cnki_record(r) for r in record.get('provenance_records', []))
+
+def missing_item(record, out):
+    return {'doi': record['doi'], 'title': record['title'], 'authors': record.get('authors', []), 'year': record.get('year'),
+            'url': record.get('landing_url') or ('https://doi.org/'+record['doi'] if record['doi'] else ''),
+            'reason': record.get('stop_reason', ''), 'manual_directory': str((out/'manual').resolve())}
+
 def page_links(html,base,record):
     soup=BeautifulSoup(html,'xml' if isinstance(html,bytes) and b'<?xml' in html[:100] else 'html.parser')
     # Only follow article PDF metadata or article-specific PDF links; never guessed URLs.
@@ -109,6 +125,11 @@ def acquire(record,out,client,email='',max_candidates=16):
             state={**info,'doi':doi(record.get('doi')),'title':record.get('title',''),'status':'verified','file':str(manual.resolve()),'sha256':hashlib.sha256(data).hexdigest(),'source_url':'user_provided','version':'unknown','attempts':[]}
             atomic(statefile,json.dumps(state,ensure_ascii=False,indent=2).encode());return state
     state={'doi':doi(record.get('doi')),'title':record.get('title',''),'status':'missing','attempts':[],'unpaywall':'enabled' if email else 'not_configured'}
+    if cnki_record(record):
+        links = candidates(record)
+        state.update(stop_reason='cnki_manual_download', authors=record.get('authors', []), year=record.get('year'), landing_url=next((c['url'] for c in links if 'cnki' in (urlparse(c['url']).hostname or '')), links[0]['url'] if links else ''))
+        atomic(statefile,json.dumps(state,ensure_ascii=False,indent=2).encode())
+        return state
     queue=candidates(record);seen=set();d=state['doi'];resolved=False;backup=None
     def persist():atomic(statefile,json.dumps(state,ensure_ascii=False,indent=2).encode())
     def add(u,source,version='unknown',depth=0):
@@ -172,7 +193,7 @@ def main():
         row=acquire(r,out,client,email,a.max_candidates);results.append(row)
         atomic(out/'manifest.json',json.dumps(results,ensure_ascii=False,indent=2).encode())
         print('DONE',len(results),row['status'],row.get('format',''),flush=True)
-    missing=[{'doi':r['doi'],'title':r['title'],'url':'https://doi.org/'+r['doi'] if r['doi'] else '', 'reason':r.get('stop_reason',''),'manual_directory':str((out/'manual').resolve())} for r in results if r['status']!='verified']
+    missing=[missing_item(r,out) for r in results if r['status']!='verified']
     atomic(out/'missing.json',json.dumps(missing,ensure_ascii=False,indent=2).encode())
     print(json.dumps({'tested':len(results),'pdf':sum(r.get('format')=='pdf' for r in results),'other_fulltext':sum(r.get('format') in ('xml','html') for r in results),'missing':len(missing)}))
 if __name__=='__main__':main()

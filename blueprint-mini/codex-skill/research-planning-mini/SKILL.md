@@ -4,11 +4,16 @@ description: >
   Research Planning Mini：轻量推进选题、文献证据、研究设计与实施，分批保存并接续，
   支持可恢复的研究状态与写作交接。用于选题调研、精简科研规划或低上下文研究流程。
 metadata:
-  version: "2"
+  version: "2.3"
 ---
 # Research Planning Mini
 
 Research Workflow Skills · 01 · Planning. See the repository README for the four-stage series and installation.
+
+## 可选环境协作与模型分工
+默认沿用当前环境和原流程，全程 Codex 不增加搬运或模型切换。用户选择网页协作、收到跨环境包或当前步骤缺少工具时，先读[协作规则](../../../workflow-contract/portable-work.md)：检查实际能力，复用原状态，按批次交付文件与接续提示词；无法执行的本地校验保持待完成。模型只按该规则建议，由用户或宿主切换，不强制切换。
+协作模式使用包内相对路径与实际可用运行环境；使用满足依赖的运行环境。工作包不代替正式阶段交接，缺少工具不降低科学或视觉验收标准。
+
 
 从研究问题推进到真实证据的写作交接。先完成用户当前需要的研究工作，不因模板存在就展开全部流程。
 
@@ -27,6 +32,7 @@ Research Workflow Skills · 01 · Planning. See the repository README for the fo
 
 ## 按需推进
 - 选题与检索：先明确问题，读[检索规则](references/literature-strategy.md)。方向确定后的完整研究准备按[核心文献遴选](references/core-literature.md)默认形成至少100篇有摘要依据的入围名单，数量不足按核心文献规则请用户调整目标；在阶段汇报并停止后，再选30篇取得全文并完成科学精读，形成内容方案；恢复复用已有工作。
+- 中文证据：研究涉及国内场景、中文论文或中文覆盖缺口时，按需读[知网检索](references/cnki-browser.md)，由实际收益决定是否启用；不固定配额。
 - 获取与阅读：读[精读规则](references/deep-reading.md)。普通文献保存简短证据笔记，核心文献按需要展开。下载按[工具适配](references/adapters.md)，网页访问或题录成功不等于 PDF 已取得。
 - 期刊与范例：目标期刊确定后按[期刊策略](references/journal-strategy.md)准备目标刊约10篇及同领域同文类、水平相近期刊合计约10篇全文对照，供写作校准体量、图表与引用；复用现有库，分批核对。
 - 设计与实施：读[设计规则](references/research-design.md)及适用研究类型。高成本执行前冻结计划；实际结果、失败、偏离和主张记入原有账本。综述记录筛选与综合，不编造实验。

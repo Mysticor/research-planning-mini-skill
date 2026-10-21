@@ -1,11 +1,12 @@
 {
   "source": "research-planning-mini",
-  "export_date": "2026-10-20",
+  "export_date": "2026-10-21",
   "excluded": [
     "personal research projects",
     "historical validation logs",
     "machine-specific cross-stage tests",
     "unrelated upstream skills"
   ],
-  "vendor_commit": "c4e4c99fbeaf0168cda090f8739e1508017a610e"
+  "vendor_commit": "c4e4c99fbeaf0168cda090f8739e1508017a610e",
+  "version": "v2.3"
 }

@@ -98,3 +98,5 @@ row is not falsely detected as changed. Other locators are human navigation poin
 file-level change signals until the agent classifies impact. No scientific inference is hardcoded.
 `publish` checks consumed input revisions against current upstream revisions. After targeted
 revalidation, consume the verified current input snapshot before marking output current.
+
+可选网页/本地协作见 [portable-work.md](portable-work.md)。全程本地不额外启用搬运；portable_bundle.py仅负责传输完整性，不认证科学或阶段就绪。
